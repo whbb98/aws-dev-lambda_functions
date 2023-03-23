@@ -2,8 +2,8 @@ import boto3, json
 from boto3.dynamodb.conditions import Key
 from boto3.dynamodb.conditions import Key, Attr, Not
 
-TABLE_NAME_STR = '<FMI_1>'
-INDEX_NAME_STR = '<FMI_2>'
+TABLE_NAME_STR = 'FoodProducts'
+INDEX_NAME_STR = 'special_GSI'
 DDB = boto3.resource('dynamodb', region_name='us-east-1')
     
 def lambda_handler(event, context):
@@ -97,7 +97,7 @@ def scan_index(event, context):
 
     
 #remove this line below once you have tested locally and wish to deploy
-print(lambda_handler({}, None))
+#print(lambda_handler({}, None))
 
 
 """
