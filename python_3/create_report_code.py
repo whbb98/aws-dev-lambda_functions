@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     return return_me
 
 #remove this line below once you have tested locally and wish to deploy
-print(lambda_handler(None, None))
+#print(lambda_handler(None, None))
 """
 Copyright @2021 [Amazon Web Services] [AWS]
     

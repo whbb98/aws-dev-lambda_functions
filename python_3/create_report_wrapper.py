@@ -2,7 +2,7 @@ import boto3
 import subprocess
 
 client = boto3.client('lambda', region_name='us-east-1')
-ROLE = '<FMI_1>'
+ROLE = 'arn:aws:iam::246483356434:role/LambdaAccessToDynamoDB'
 BUCKET = subprocess.getoutput('aws s3api list-buckets --query "Buckets[].Name" | grep s3bucket | tr -d "," | xargs')
 
 response = client.create_function(
